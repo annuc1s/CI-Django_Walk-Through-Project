@@ -1,4 +1,3 @@
-  
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 from django.conf import settings
@@ -27,11 +26,12 @@ def checkout(request):
         currency=settings.STRIPE_CURRENCY,
     )
 
+    order_form = OrderForm()
+
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
-            Did you forget to set it in your environment')
+            Did you forget to set it in your environment?')
 
-    order_form = OrderForm()
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
