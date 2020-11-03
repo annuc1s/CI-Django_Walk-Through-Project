@@ -25,14 +25,13 @@
     color: #aab7c4;
 }
 
-
-.fieldset-label{
+.fieldset-label {
     position: relative;
-    right: 2rem;
+    right: .5rem;
 }
 
 #payment-form .form-control,
-#card-element{
+#card-element {
     color: #000;
     border: 1px solid #000;
 }
@@ -43,13 +42,13 @@ select option {
 }
 
 select:invalid,
-select option {
+select option[value=""] {
     color: #aab7c4 !important;
 }
 
-#loading-overlay{
-    display: none;
-    position: fixed;
+#loading-overlay {
+	display: none;
+	position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -58,8 +57,8 @@ select option {
     z-index: 9999;
 }
 
-.loading-spinner{
-    display: flex;
+.loading-spinner {
+	display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
